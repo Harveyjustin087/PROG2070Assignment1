@@ -1,9 +1,19 @@
-﻿using System;
+﻿/*
+ * PROG 2070
+ * By: Justin Harvey
+ * Assignment 1
+ * Circle.cs
+ * Professor: Rob Bowyer
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace PROG2070Assign1
 {
+    /// <summary>
+    /// Circle class contains caluclations for the main program
+    /// </summary>
     public class Circle
     {
         private int radius;
@@ -20,16 +30,33 @@ namespace PROG2070Assign1
         {
             this.radius = radius;
         }
+        /// <summary>
+        /// Returns the Radius of the Circle based on user input
+        /// </summary>
+        /// <returns></returns>
         public int GetRadius()
         {
-            //Console.WriteLine("Pleases enter a Radius");
-            //radius = Convert.ToInt32(Console.ReadLine());
             return radius;
         }
+        /// <summary>
+        /// Sets a new Radius for the circle replacing the previous set one
+        /// </summary>
+        /// <param name="userRadius"></param>
         public void SetRadius(int userRadius)
         {
-            radius = userRadius;
+            if (userRadius >= 1)
+            {
+                radius = userRadius; 
+            }
+            else
+            {
+                Console.WriteLine("Sorry the radius cannot be less than 1");
+            }
         }
+        /// <summary>
+        /// Returns the Circumfrence of the circle based on the Radius input
+        /// </summary>
+        /// <returns></returns>
         public double GetCircumfrence()
         {
             circumfrence = Math.PI * (2 * radius);
@@ -37,6 +64,10 @@ namespace PROG2070Assign1
             return circumfrence;
 
         }
+        /// <summary>
+        /// Returns the Area of the circle based on the Radius input
+        /// </summary>
+        /// <returns></returns>
         public double GetArea()
         {
             double squaredRadius = radius * radius;

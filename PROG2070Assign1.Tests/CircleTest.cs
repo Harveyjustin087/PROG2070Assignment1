@@ -1,4 +1,11 @@
-﻿using NUnit.Framework;
+﻿/*
+ * PROG 2070
+ * By: Justin Harvey
+ * Assignment 1
+ * CircleTest.cs
+ * Professor: Rob Bowyer
+ */
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
